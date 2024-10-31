@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    gap: 10px;
+}
+
+
+
+.jardin {
+    justify-content: space-between;
+}
+
+.nombre__alumno {
+    width: 70%;
+}

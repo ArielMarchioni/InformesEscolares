@@ -5,60 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Informe Escolar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <h1>Generador de Informe Escolar</h1>
 
-    <div>
-        <label for="nombreJardin">Nombre del jardín:</label>
-        <input type="text" id="nombreJardin" required>
-        <label for="direccionJardin">Dirección:</label>
-        <input type="text" id="direccionJardin" required>
+    <div class="container" style=" width: 70%; ">
+        <h1>Generador de Informe Escolar</h1>
 
-        <label for="imagen">Subir imagen (esquina superior izquierda):</label>
-        <input type="file" id="imagen" accept="image/*">
+        <fieldset class="flex-container" style=" justify-content: space-between;">
+
+            <div class="container" style="margin-right:10px ;">
+                <label for="nombreJardin">Nombre del jardín</label>
+                <input type="text" id="nombreJardin" required>
+            </div>
+            <div class="container">
+                <label for="direccionJardin">Dirección</label>
+                <input type="text" id="direccionJardin" required>
+
+            </div>
+
+        </fieldset>
+        <div>
+            <label for="imagen">Subir imagen </label>
+            <input type="file" id="imagen" accept="image/*">
+        </div>
+
+        <form id="informeForm">
+
+            <fieldset class="flex-container">
+
+                <label for="sala">Sala</label>
+                <input type="text" id="sala" required>
+                <label for="turno">Turno</label>
+                <select id="turno" required>
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde">Tarde</option>
+                </select>
+
+                <label for="seccion">Sección</label>
+                <input type="text" id="seccion" required>
+
+            </fieldset>
+
+            <label for="docente">Docente</label>
+            <input type="text" id="docente" required>
+
+            <fieldset class="flex-container">
+
+                <div class="nombre__alumno ">
+                    <label for="nombreAlumno">Nombre y Apellido del alumno</label>
+                    <input type="text" id="nombreAlumno" required>
+                </div>
+
+                <div>
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" required>
+                </div>
+            </fieldset>
+
+            <label for="juego">Juego</label>
+            <select id="juego">
+                <option value="bien">Bien</option>
+                <option value="mal">Mal</option>
+            </select>
+
+            <label for="companerismo">Compañerismo:</label>
+            <select id="companerismo">
+                <option value="bien">Bien</option>
+                <option value="mal">Mal</option>
+            </select>
+
+            <label for="matematicas">Matemáticas</label>
+            <select id="matematicas">
+                <option value="bien">Bien</option>
+                <option value="mal">Mal</option>
+            </select>
+
+            <label for="otros">Observaciones adicionales</label>
+            <textarea id="otros" rows="4" cols="50"></textarea>
+
+            <button type="button">Generar PDF</button>
+        </form>
+
     </div>
-
-    <form id="informeForm">
-        <label for="sala">Sala:</label>
-        <input type="text" id="sala" required>
-        <label for="turno">Turno:</label>
-        <input type="text" id="turno" required>
-        <label for="seccion">Sección:</label>
-        <input type="text" id="seccion" required>
-
-        <label for="docente">Docente:</label>
-        <input type="text" id="docente" required>
-        <label for="nombreAlumno">Nombre y Apellido del alumno:</label>
-        <input type="text" id="nombreAlumno" required>
-        <label for="edad">Edad:</label <input type="number" id="edad" required>
-
-        <label for="juego">Juego:</label>
-        <select id="juego">
-            <option value="bien">Bien</option>
-            <option value="mal">Mal</option>
-        </select><br><br>
-
-        <label for="companerismo">Compañerismo:</label>
-        <select id="companerismo">
-            <option value="bien">Bien</option>
-            <option value="mal">Mal</option>
-        </select><br><br>
-
-        <label for="matematicas">Matemáticas:</label>
-        <select id="matematicas">
-            <option value="bien">Bien</option>
-            <option value="mal">Mal</option>
-        </select><br><br>
-
-        <label for="otros">Observaciones adicionales:</label>
-        <textarea id="otros" rows="4" cols="50"></textarea>
-
-        <button type="button">Generar PDF</button>
-    </form>
-
-
 
 </body>
 
