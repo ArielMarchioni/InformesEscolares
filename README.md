@@ -28,7 +28,7 @@ Este proyecto utiliza la librería [jsPDF](https://github.com/parallax/jsPDF) pa
 
 ## 🎨 Vista del Proyecto
 
-<img src="/captura.png" alt="Vista previa del Generador de Informe Escolar" width="80%">
+<img src="assets/captura.png" alt="Vista previa del Generador de Informe Escolar" width="80%">
 
 ## 📚 Tecnologías Utilizadas
 
